@@ -1,43 +1,87 @@
-<div id="carousel-banner-{{ module }}" class="carousel slide{% if effect == 'fade' %} carousel-fade{% endif %}" data-bs-ride="carousel">
-  {% if indicators and banners|batch(items)|length > 1 %}
-    <div class="carousel-indicators">
-      {% set banner_row = 0 %}
-      {% for banner in banners|batch(items) %}
-        <button type="button" data-bs-target="#carousel-banner-{{ module }}" data-bs-slide-to="{{ banner_row }}"{% if banner_row == 0 %} class="active"{% endif %}></button>
-        {% set banner_row = banner_row + 1 %}
-      {% endfor %}
-    </div>
-  {% endif %}
-  <div class="carousel-inner">
-    {% set banner_row = 0 %}
-    {% for carousel in banners|batch(items) %}
-      <div class="carousel-item{% if banner_row == 0 %} active{% endif %}">
-        <div class="row justify-content-center">
-          {% for banner in carousel %}
-            <div class="col-{{ (12 / items)|round }} text-center">
-              {% if banner.link %}
-                <a href="{{ banner.link }}"><img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-fluid"/></a>
-              {% else %}
-                <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-fluid"/>
-              {% endif %}
+{# <div id="carousel-banner-{{ module }}" class="carousel slide{% if effect == 'fade' %} carousel-fade{% endif %}" data-bs-ride="carousel"> #}
+{#  {% if indicators and banners|batch(items)|length > 1 %} #}
+{#    <div class="carousel-indicators"> #}
+{#      {% set banner_row = 0 %} #}
+{#      {% for banner in banners|batch(items) %} #}
+{#        <button type="button" data-bs-target="#carousel-banner-{{ module }}" data-bs-slide-to="{{ banner_row }}"{% if banner_row == 0 %} class="active"{% endif %}></button> #}
+{#        {% set banner_row = banner_row + 1 %} #}
+{#      {% endfor %} #}
+{#    </div> #}
+{#  {% endif %} #}
+{#  <div class="carousel-inner"> #}
+{#    {% set banner_row = 0 %} #}
+{#    {% for carousel in banners|batch(items) %} #}
+{#      <div class="carousel-item{% if banner_row == 0 %} active{% endif %}"> #}
+{#        <div class="row justify-content-center"> #}
+{#          {% for banner in carousel %} #}
+{#            <div class="col-{{ (12 / items)|round }} text-center"> #}
+{#              {% if banner.link %} #}
+{#                <a href="{{ banner.link }}"><img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-fluid"/></a> #}
+{#              {% else %} #}
+{#                <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-fluid"/> #}
+{#              {% endif %} #}
+{#            </div> #}
+{#          {% endfor %} #}
+{#        </div> #}
+{#      </div> #}
+{#      {% set banner_row = banner_row + 1 %} #}
+{#    {% endfor %} #}
+{#  </div> #}
+{#  {% if controls and banners|batch(items)|length > 1 %} #}
+{#    <button type="button" class="carousel-control-prev" data-bs-target="#carousel-banner-{{ module }}" data-bs-slide="prev"><span class="fa-solid fa-chevron-left"></span></button> #}
+{#    <button type="button" class="carousel-control-next" data-bs-target="#carousel-banner-{{ module }}" data-bs-slide="next"><span class="fa-solid fa-chevron-right"></span></button> #}
+{#  {% endif %} #}
+{# </div> #}
+{# <script type="text/javascript"> #}
+{# $(document).ready(function () { #}
+{#    new bootstrap.Carousel(document.querySelector('#carousel-banner-{{ module }}'), { #}
+{#        ride: 'carousel', #}
+{#        interval: {{ interval|escape('js') }}, #}
+{#        wrap: true #}
+{#    }); #}
+{# }); #}
+{# </script> #}
+
+
+<div class="home-slider" data-slider="home-slider">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="top-img"><img class="swiper-lazy" src="/catalog/view/images/pics/top-img.jpg" width="600"
+                                          height="771"></div>
             </div>
-          {% endfor %}
         </div>
-      </div>
-      {% set banner_row = banner_row + 1 %}
-    {% endfor %}
-  </div>
-  {% if controls and banners|batch(items)|length > 1 %}
-    <button type="button" class="carousel-control-prev" data-bs-target="#carousel-banner-{{ module }}" data-bs-slide="prev"><span class="fa-solid fa-chevron-left"></span></button>
-    <button type="button" class="carousel-control-next" data-bs-target="#carousel-banner-{{ module }}" data-bs-slide="next"><span class="fa-solid fa-chevron-right"></span></button>
-  {% endif %}
+    </div>
 </div>
-<script type="text/javascript"><!--
-$(document).ready(function () {
-    new bootstrap.Carousel(document.querySelector('#carousel-banner-{{ module }}'), {
-        ride: 'carousel',
-        interval: {{ interval|escape('js') }},
-        wrap: true
-    });
-});
-//--></script>
+<section class="section section--double-slider">
+    <div class="double-slider" data-slider="double-slider">
+        <button class="double-slider__arrow js-next-swiper">
+            <svg width="158" height="16" viewBox="0 0 158 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M157.707 8.70711C158.098 8.31658 158.098 7.68342 157.707 7.29289L151.343 0.928932C150.953 0.538408 150.319 0.538408 149.929 0.928932C149.538 1.31946 149.538 1.95262 149.929 2.34315L155.586 8L149.929 13.6569C149.538 14.0474 149.538 14.6805 149.929 15.0711C150.319 15.4616 150.953 15.4616 151.343 15.0711L157.707 8.70711ZM0 9H157V7H0V9Z"></path>
+            </svg>
+        </button>
+        <button class="double-slider__arrow js-prev-swiper">
+            <svg width="158" height="16" viewBox="0 0 158 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M157.707 8.70711C158.098 8.31658 158.098 7.68342 157.707 7.29289L151.343 0.928932C150.953 0.538408 150.319 0.538408 149.929 0.928932C149.538 1.31946 149.538 1.95262 149.929 2.34315L155.586 8L149.929 13.6569C149.538 14.0474 149.538 14.6805 149.929 15.0711C150.319 15.4616 150.953 15.4616 151.343 15.0711L157.707 8.70711ZM0 9H157V7H0V9Z"></path>
+            </svg>
+        </button>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a class="double-item" href="#">
+                        <div class="double-item__name"><span>МУЖСКАЯ</span>ОДЕЖДА</div>
+                        <img class="swiper-lazy" src="catalog/view/images/pics/slide1.webp" width="600"
+                             height="771"></a>
+                </div>
+                <div class="swiper-slide"><a class="double-item" href="#">
+                        <div class="double-item__name"><span>женская</span>ОДЕЖДА</div>
+                        <img class="swiper-lazy" src="catalog/view/images/pics/slide2.webp" width="600"
+                             height="771"></a>
+                </div>
+                <div class="swiper-slide"><a class="double-item" href="#">
+                        <div class="double-item__name"><span>детская</span>ОДЕЖДА</div>
+                        <img class="swiper-lazy" src="catalog/view/images/pics/slide3.jpg" width="600" height="771"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

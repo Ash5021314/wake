@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/wake.iml" filepath="$PROJECT_DIR$/.idea/wake.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/wake-dist/.idea/wake-dist.iml" filepath="$USER_HOME$/Desktop/wake-dist/.idea/wake-dist.iml" />
     </modules>
   </component>
 </project>

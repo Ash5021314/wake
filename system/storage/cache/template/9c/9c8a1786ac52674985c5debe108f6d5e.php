@@ -33,149 +33,51 @@ class __TwigTemplate_3285abf1fad6032b249eb0b61d5bebf5 extends Template
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 1
-        echo "<div id=\"carousel-banner-";
-        echo ($context["module"] ?? null);
-        echo "\" class=\"carousel slide";
-        if ((($context["effect"] ?? null) == "fade")) {
-            echo " carousel-fade";
-        }
-        echo "\" data-bs-ride=\"carousel\">
-  ";
-        // line 2
-        if ((($context["indicators"] ?? null) && (twig_length_filter($this->env, twig_array_batch(($context["banners"] ?? null), ($context["items"] ?? null))) > 1))) {
-            // line 3
-            echo "    <div class=\"carousel-indicators\">
-      ";
-            // line 4
-            $context["banner_row"] = 0;
-            // line 5
-            echo "      ";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_array_batch(($context["banners"] ?? null), ($context["items"] ?? null)));
-            foreach ($context['_seq'] as $context["_key"] => $context["banner"]) {
-                // line 6
-                echo "        <button type=\"button\" data-bs-target=\"#carousel-banner-";
-                echo ($context["module"] ?? null);
-                echo "\" data-bs-slide-to=\"";
-                echo ($context["banner_row"] ?? null);
-                echo "\"";
-                if ((($context["banner_row"] ?? null) == 0)) {
-                    echo " class=\"active\"";
-                }
-                echo "></button>
-        ";
-                // line 7
-                $context["banner_row"] = (($context["banner_row"] ?? null) + 1);
-                // line 8
-                echo "      ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['banner'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 9
-            echo "    </div>
-  ";
-        }
-        // line 11
-        echo "  <div class=\"carousel-inner\">
-    ";
-        // line 12
-        $context["banner_row"] = 0;
-        // line 13
-        echo "    ";
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_array_batch(($context["banners"] ?? null), ($context["items"] ?? null)));
-        foreach ($context['_seq'] as $context["_key"] => $context["carousel"]) {
-            // line 14
-            echo "      <div class=\"carousel-item";
-            if ((($context["banner_row"] ?? null) == 0)) {
-                echo " active";
-            }
-            echo "\">
-        <div class=\"row justify-content-center\">
-          ";
-            // line 16
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable($context["carousel"]);
-            foreach ($context['_seq'] as $context["_key"] => $context["banner"]) {
-                // line 17
-                echo "            <div class=\"col-";
-                echo twig_round((12 / ($context["items"] ?? null)));
-                echo " text-center\">
-              ";
-                // line 18
-                if (twig_get_attribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 18)) {
-                    // line 19
-                    echo "                <a href=\"";
-                    echo twig_get_attribute($this->env, $this->source, $context["banner"], "link", [], "any", false, false, false, 19);
-                    echo "\"><img src=\"";
-                    echo twig_get_attribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 19);
-                    echo "\" alt=\"";
-                    echo twig_get_attribute($this->env, $this->source, $context["banner"], "title", [], "any", false, false, false, 19);
-                    echo "\" class=\"img-fluid\"/></a>
-              ";
-                } else {
-                    // line 21
-                    echo "                <img src=\"";
-                    echo twig_get_attribute($this->env, $this->source, $context["banner"], "image", [], "any", false, false, false, 21);
-                    echo "\" alt=\"";
-                    echo twig_get_attribute($this->env, $this->source, $context["banner"], "title", [], "any", false, false, false, 21);
-                    echo "\" class=\"img-fluid\"/>
-              ";
-                }
-                // line 23
-                echo "            </div>
-          ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['banner'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 25
-            echo "        </div>
-      </div>
-      ";
-            // line 27
-            $context["banner_row"] = (($context["banner_row"] ?? null) + 1);
-            // line 28
-            echo "    ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['carousel'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
-        echo "  </div>
-  ";
-        // line 30
-        if ((($context["controls"] ?? null) && (twig_length_filter($this->env, twig_array_batch(($context["banners"] ?? null), ($context["items"] ?? null))) > 1))) {
-            // line 31
-            echo "    <button type=\"button\" class=\"carousel-control-prev\" data-bs-target=\"#carousel-banner-";
-            echo ($context["module"] ?? null);
-            echo "\" data-bs-slide=\"prev\"><span class=\"fa-solid fa-chevron-left\"></span></button>
-    <button type=\"button\" class=\"carousel-control-next\" data-bs-target=\"#carousel-banner-";
-            // line 32
-            echo ($context["module"] ?? null);
-            echo "\" data-bs-slide=\"next\"><span class=\"fa-solid fa-chevron-right\"></span></button>
-  ";
-        }
-        // line 34
-        echo "</div>
-<script type=\"text/javascript\"><!--
-\$(document).ready(function () {
-    new bootstrap.Carousel(document.querySelector('#carousel-banner-";
-        // line 37
-        echo ($context["module"] ?? null);
-        echo "'), {
-        ride: 'carousel',
-        interval: ";
-        // line 39
-        echo twig_escape_filter($this->env, ($context["interval"] ?? null), "js");
-        echo ",
-        wrap: true
-    });
-});
-//--></script>
-";
+        // line 44
+        echo "
+
+<div class=\"home-slider\" data-slider=\"home-slider\">
+    <div class=\"swiper-container\">
+        <div class=\"swiper-wrapper\">
+            <div class=\"swiper-slide\">
+                <div class=\"top-img\"><img class=\"swiper-lazy\" src=\"/catalog/view/images/pics/top-img.jpg\" width=\"600\"
+                                          height=\"771\"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class=\"section section--double-slider\">
+    <div class=\"double-slider\" data-slider=\"double-slider\">
+        <button class=\"double-slider__arrow js-next-swiper\">
+            <svg width=\"158\" height=\"16\" viewBox=\"0 0 158 16\" xmlns=\"http://www.w3.org/2000/svg\">
+                <path d=\"M157.707 8.70711C158.098 8.31658 158.098 7.68342 157.707 7.29289L151.343 0.928932C150.953 0.538408 150.319 0.538408 149.929 0.928932C149.538 1.31946 149.538 1.95262 149.929 2.34315L155.586 8L149.929 13.6569C149.538 14.0474 149.538 14.6805 149.929 15.0711C150.319 15.4616 150.953 15.4616 151.343 15.0711L157.707 8.70711ZM0 9H157V7H0V9Z\"></path>
+            </svg>
+        </button>
+        <button class=\"double-slider__arrow js-prev-swiper\">
+            <svg width=\"158\" height=\"16\" viewBox=\"0 0 158 16\" xmlns=\"http://www.w3.org/2000/svg\">
+                <path d=\"M157.707 8.70711C158.098 8.31658 158.098 7.68342 157.707 7.29289L151.343 0.928932C150.953 0.538408 150.319 0.538408 149.929 0.928932C149.538 1.31946 149.538 1.95262 149.929 2.34315L155.586 8L149.929 13.6569C149.538 14.0474 149.538 14.6805 149.929 15.0711C150.319 15.4616 150.953 15.4616 151.343 15.0711L157.707 8.70711ZM0 9H157V7H0V9Z\"></path>
+            </svg>
+        </button>
+        <div class=\"swiper-container\">
+            <div class=\"swiper-wrapper\">
+                <div class=\"swiper-slide\"><a class=\"double-item\" href=\"#\">
+                        <div class=\"double-item__name\"><span>МУЖСКАЯ</span>ОДЕЖДА</div>
+                        <img class=\"swiper-lazy\" src=\"catalog/view/images/pics/slide1.webp\" width=\"600\"
+                             height=\"771\"></a>
+                </div>
+                <div class=\"swiper-slide\"><a class=\"double-item\" href=\"#\">
+                        <div class=\"double-item__name\"><span>женская</span>ОДЕЖДА</div>
+                        <img class=\"swiper-lazy\" src=\"catalog/view/images/pics/slide2.webp\" width=\"600\"
+                             height=\"771\"></a>
+                </div>
+                <div class=\"swiper-slide\"><a class=\"double-item\" href=\"#\">
+                        <div class=\"double-item__name\"><span>детская</span>ОДЕЖДА</div>
+                        <img class=\"swiper-lazy\" src=\"catalog/view/images/pics/slide3.jpg\" width=\"600\" height=\"771\"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>";
     }
 
     public function getTemplateName()
@@ -183,14 +85,9 @@ class __TwigTemplate_3285abf1fad6032b249eb0b61d5bebf5 extends Template
         return "extension/opencart/catalog/view/template/module/banner.twig";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  172 => 39,  167 => 37,  162 => 34,  157 => 32,  152 => 31,  150 => 30,  147 => 29,  141 => 28,  139 => 27,  135 => 25,  128 => 23,  120 => 21,  110 => 19,  108 => 18,  103 => 17,  99 => 16,  91 => 14,  86 => 13,  84 => 12,  81 => 11,  77 => 9,  71 => 8,  69 => 7,  58 => 6,  53 => 5,  51 => 4,  48 => 3,  46 => 2,  37 => 1,);
+        return array (  37 => 44,);
     }
 
     public function getSourceContext()

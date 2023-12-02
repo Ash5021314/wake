@@ -1,0 +1,1 @@
+2023-12-01 21:25:07 - PHP Warning:  mkdir(): File exists in C:\OSPanel\domains\wake\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 50
