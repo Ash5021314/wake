@@ -236,12 +236,47 @@ class __TwigTemplate_05148e8346e1ae89778d68e7551dac00 extends Template
       </div>
     </div>
   </div>
-  <div class=\"header__bottom\"><a class=\"logo logo--header\" href=\"#\"><img src=\"catalog/view/images/icons/logo.svg\" width=\"136\" height=\"50\"></a>
+  <div class=\"header__bottom\">
+    ";
+        // line 155
+        if (($context["logo"] ?? null)) {
+            // line 156
+            echo "        <a href=\"";
+            echo ($context["home"] ?? null);
+            echo "\" class=\"logo logo--header\">
+           <img src=\"";
+            // line 157
+            echo ($context["logo"] ?? null);
+            echo "\" title=\"";
+            echo ($context["name"] ?? null);
+            echo "\" alt=\"";
+            echo ($context["name"] ?? null);
+            echo "\" width=\"136\" height=\"50\"/>
+        </a>
+    ";
+        } else {
+            // line 160
+            echo "        <h1>
+          <a href=\"";
+            // line 161
+            echo ($context["home"] ?? null);
+            echo "\">";
+            echo ($context["name"] ?? null);
+            echo "</a>
+        </h1>
+    ";
+        }
+        // line 164
+        echo "      ";
+        echo ($context["menu"] ?? null);
+        echo "
     <div class=\"header__menu\">
       <div class=\"link link--upper-mini js-open-menu\" data-id=\"1\"><a class=\"link__text\" href=\"#\">Женщинам</a></div>
       <div class=\"link link--upper-mini js-open-menu\" data-id=\"2\"><a class=\"link__text\" href=\"#\">Мужчинам</a></div>
-      <div class=\"link link--upper-mini js-open-menu\" data-id=\"3\"><a class=\"link__text\" href=\"#\">Детям</a></div><a class=\"link link--upper-mini js-open-menu\" href=\"#\" data-id=\"4\">
-        <div class=\"link__text\">Sale %</div></a>
+      <div class=\"link link--upper-mini js-open-menu\" data-id=\"3\"><a class=\"link__text\" href=\"#\">Детям</a></div>
+      <a class=\"link link--upper-mini js-open-menu\" href=\"#\" data-id=\"4\">
+        <div class=\"link__text\">Sale %</div>
+      </a>
     </div>
     <div class=\"header__buttons\">
       <div class=\"search\">
@@ -292,7 +327,35 @@ class __TwigTemplate_05148e8346e1ae89778d68e7551dac00 extends Template
 <div class=\"mob-menu\">
   <div class=\"mob-menu__body\">
     <div class=\"mob-menu__top\">
-      <div class=\"mob-menu__logo\"><img src=\"/catalog/view/images/icons/logo.svg\" width=\"136\" height=\"50\"></div>
+      <div class=\"mob-menu__logo\">
+        ";
+        // line 223
+        if (($context["logo"] ?? null)) {
+            // line 224
+            echo "           <a href=\"";
+            echo ($context["home"] ?? null);
+            echo "\">
+             <img src=\"";
+            // line 225
+            echo ($context["logo"] ?? null);
+            echo "\" title=\"";
+            echo ($context["name"] ?? null);
+            echo "\" alt=\"";
+            echo ($context["name"] ?? null);
+            echo "\" width=\"136\" height=\"50\"/>
+           </a>
+        ";
+        } else {
+            // line 228
+            echo "           <h1><a href=\"";
+            echo ($context["home"] ?? null);
+            echo "\">";
+            echo ($context["name"] ?? null);
+            echo "</a></h1>
+        ";
+        }
+        // line 230
+        echo "      </div>
       <div class=\"mob-menu__close js-close-menu\"><img src=\"/catalog/view/images/icons/close.svg\" width=\"600\" height=\"771\"></div>
     </div>
     <div class=\"mob-menu__list\">
@@ -359,8 +422,9 @@ class __TwigTemplate_05148e8346e1ae89778d68e7551dac00 extends Template
 
 
 ";
-        // line 293
+        // line 313
         echo "<main>
+
 ";
     }
 
@@ -376,7 +440,7 @@ class __TwigTemplate_05148e8346e1ae89778d68e7551dac00 extends Template
 
     public function getDebugInfo()
     {
-        return array (  363 => 293,  165 => 80,  159 => 41,  150 => 39,  146 => 38,  139 => 33,  128 => 31,  123 => 30,  114 => 28,  109 => 27,  96 => 25,  92 => 24,  85 => 19,  80 => 17,  75 => 15,  69 => 13,  66 => 12,  60 => 10,  58 => 9,  54 => 8,  50 => 7,  40 => 2,  37 => 1,);
+        return array (  426 => 313,  358 => 230,  350 => 228,  340 => 225,  335 => 224,  333 => 223,  270 => 164,  262 => 161,  259 => 160,  249 => 157,  244 => 156,  242 => 155,  165 => 80,  159 => 41,  150 => 39,  146 => 38,  139 => 33,  128 => 31,  123 => 30,  114 => 28,  109 => 27,  96 => 25,  92 => 24,  85 => 19,  80 => 17,  75 => 15,  69 => 13,  66 => 12,  60 => 10,  58 => 9,  54 => 8,  50 => 7,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()

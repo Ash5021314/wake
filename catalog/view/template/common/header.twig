@@ -151,12 +151,24 @@
       </div>
     </div>
   </div>
-  <div class="header__bottom"><a class="logo logo--header" href="#"><img src="catalog/view/images/icons/logo.svg" width="136" height="50"></a>
+  <div class="header__bottom">
+    {% if logo %}
+        <a href="{{ home }}" class="logo logo--header">
+           <img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" width="136" height="50"/>
+        </a>
+    {% else %}
+        <h1>
+          <a href="{{ home }}">{{ name }}</a>
+        </h1>
+    {% endif %}
+      {{ menu }}
     <div class="header__menu">
       <div class="link link--upper-mini js-open-menu" data-id="1"><a class="link__text" href="#">Женщинам</a></div>
       <div class="link link--upper-mini js-open-menu" data-id="2"><a class="link__text" href="#">Мужчинам</a></div>
-      <div class="link link--upper-mini js-open-menu" data-id="3"><a class="link__text" href="#">Детям</a></div><a class="link link--upper-mini js-open-menu" href="#" data-id="4">
-        <div class="link__text">Sale %</div></a>
+      <div class="link link--upper-mini js-open-menu" data-id="3"><a class="link__text" href="#">Детям</a></div>
+      <a class="link link--upper-mini js-open-menu" href="#" data-id="4">
+        <div class="link__text">Sale %</div>
+      </a>
     </div>
     <div class="header__buttons">
       <div class="search">
@@ -207,7 +219,15 @@
 <div class="mob-menu">
   <div class="mob-menu__body">
     <div class="mob-menu__top">
-      <div class="mob-menu__logo"><img src="/catalog/view/images/icons/logo.svg" width="136" height="50"></div>
+      <div class="mob-menu__logo">
+        {% if logo %}
+           <a href="{{ home }}">
+             <img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" width="136" height="50"/>
+           </a>
+        {% else %}
+           <h1><a href="{{ home }}">{{ name }}</a></h1>
+        {% endif %}
+      </div>
       <div class="mob-menu__close js-close-menu"><img src="/catalog/view/images/icons/close.svg" width="600" height="771"></div>
     </div>
     <div class="mob-menu__list">
@@ -291,4 +311,4 @@
 {#  </div>#}
 {#</header>#}
 <main>
-{#  {{ menu }}#}
+
